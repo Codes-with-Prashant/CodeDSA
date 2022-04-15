@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class Main {
+  public static int countN(int n) {
+    int d = 0, r = 0;
+    while (n > 0)
+    { n /= 10;
+      d++;
+    }
+    return d;
+  }
+  public static void digitN(int n){
+      int c=countN(n)-1;
+      
+      while(c>=0)
+      {int d=n/(int)Math.pow(10,c);
+          System.out.println(d);
+        n%=(int)Math.pow(10,c);
+        c--;
+      }
+  }
+  public static void main(String[] args) {
+    Scanner scn = new Scanner(System.in);
+    int n = scn.nextInt();
+   digitN(n);
+  }
+}
